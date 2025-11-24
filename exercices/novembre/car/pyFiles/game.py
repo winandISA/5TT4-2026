@@ -7,7 +7,7 @@ def run_game(win):
     track = pygame.transform.scale(track, (WIDTH, HEIGHT))
 
     car_image = pygame.image.load("images/car.png").convert_alpha()
-    car_image = pygame.transform.scale(car_image, (50, 70))
+    car_image = pygame.transform.smoothscale(car_image, (50, 70))
 
     font = pygame.font.SysFont(None, 32)
 
