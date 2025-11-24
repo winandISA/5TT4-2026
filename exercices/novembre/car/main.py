@@ -17,12 +17,12 @@ while running:
 
     if choice == "quit":
         running = False
-        break
+    else:
 
-    last_lap, last_race = run_game(win)
-    if last_lap < best_lap:
-        best_lap = last_lap
-    if last_race < best_race:
-        best_race = last_race
+        last_lap, last_race = run_game(win)
+        if last_lap < best_lap:
+            best_lap = last_lap
+        if last_race < best_race:
+            best_race = last_race
 
 pygame.quit()
