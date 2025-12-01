@@ -41,7 +41,7 @@ def run_game(win):
         dt = clock.tick(60)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                courseTerminee = True
 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_UP]:
