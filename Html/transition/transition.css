@@ -1,0 +1,23 @@
+.btn-advanced {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    font-size: 16px;
+    opacity: 1;
+    transition:
+            width 0.5s ease-in-out,
+            font-size 0.3s ease,
+            background-color 0.5s ease-in,
+            opacity 0.2s ease-out;
+}
+
+
+.btn-advanced:hover {
+    width: 250px; /* Largeur augmentée */
+    font-size: 22px; /* Police agrandie */
+    background-color: #1abc9c; /* Couleur de fond changée */
+    opacity: 0.8; /* Opacité réduite */
+}

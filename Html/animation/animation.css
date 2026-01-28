@@ -1,0 +1,67 @@
+div{
+    height: 100px;
+    margin: 0 auto 20px auto;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+
+.d1{
+    animation: apparance 5s ease 2s infinite alternate;
+}
+
+
+.d2{
+    animation: tailleX 5s linear 2s 5 alternate both;
+}
+
+
+.d3{
+    animation: tailleY 5s linear 2s infinite alternate both;
+}
+
+
+.d4{
+    animation: apparance 5s linear 1s infinite alternate,
+    tailleX 4s linear 1s 5 alternate both,
+    tailleY 6s ease-in 1s infinite normal;
+}
+
+
+.d4:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes tailleX{
+    from{width: 100%;}
+    50%{width: 50%;}
+    to{width: 100%;}
+}
+
+
+@keyframes tailleY {
+    from{height: 100px;}
+    20%{height: 150px;}
+    80%{height: 150px;}
+    to{height: 100px;}
+}
+
+@keyframes apparance{
+    from{
+        background-color: orange;
+        border-radius: 0%;
+    }
+    50%{
+        background-color: purple;
+        border-radius: 50%;
+    }
+    to{
+        background-color: blue;
+        border-radius: 100%;
+    }
+}
+
+
+table{width: 100%}
+td{width: 50%}
