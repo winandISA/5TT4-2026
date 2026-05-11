@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Réaction - Couleurs</title>
+</head>
+<body>
+
+<h2>Quelle est cette couleur ?</h2>
+
+<div id="zone-couleur"
+     style="width: 200px; height: 200px; border: 2px solid black; background-color: lightgrey; display: flex; align-items: center; justify-content: center; font-family: sans-serif;">
+    Survole-moi !
+</div>
+
+<br>
+
+<button onclick="verifierChoix('red')">ROUGE</button>
+<button onclick="verifierChoix('green')">VERT</button>
+<button onclick="verifierChoix('blue')">BLEU</button>
+
+<br><br>
+
+<div id="resultat" style="font-family: sans-serif; font-weight: bold;"></div>
+
+<script>
+    //recupérer le div zone-couleurCible, le div resultat
+    // initialiser une liste de couleurs ['red', 'green', 'blue']
+    // deux variables pour stocker la couleur choisie et le timestamp de début
+
+    // Ajouter un eventlistener sur la zone-couleurCible
+        // choisir une couleur aléatoirement --> Math.floor(Math.random() * couleurs.length) .floor fait un arondi, random sélectionne un nombre entre 0 et 1
+        // récupérer la couleur dans la liste
+        // changer le style.backgroundColor
+        // tempsDebut = Date.now();
+        // resultat.innerText = "Vite ! Cliquez sur le bon bouton !";
+
+    // Fonction appelée par les boutons
+        //controler qu'une couleur a été choisie sinon on sort
+        // calculer la durée (refaire un Date.now()) puis soustraire le tempsDebut et /1000 (résultat en millisecond)
+        // tester si la couleur cliquée est correcte afficher "gagné en x seconds" ou "perdu"
+        // Réinitialisation pour le prochain tour
+</script>
+</body>
+</html>
