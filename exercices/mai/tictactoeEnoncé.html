@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Morpion Table Directe</title>
+</head>
+<body>
+
+<table border="2" cellspacing="0">
+    <tr>
+        <td id="0" width="100" height="100" align="center" valign="middle"></td>
+        <td id="1" width="100" height="100" align="center" valign="middle"></td>
+        <td id="2" width="100" height="100" align="center" valign="middle"></td>
+    </tr>
+    <tr>
+        <td id="3" width="100" height="100" align="center" valign="middle"></td>
+        <td id="4" width="100" height="100" align="center" valign="middle"></td>
+        <td id="5" width="100" height="100" align="center" valign="middle"></td>
+    </tr>
+    <tr>
+        <td id="6" width="100" height="100" align="center" valign="middle"></td>
+        <td id="7" width="100" height="100" align="center" valign="middle"></td>
+        <td id="8" width="100" height="100" align="center" valign="middle"></td>
+    </tr>
+</table>
+
+<p id="message"></p>
+<button id="nouveau">Nouvelle partie</button>
+
+<script>
+//initialiser les cellules (getbyclassname), la zone de texte message et le bouton nouveau
+const cellules = document.getElementsByClassName('zone');
+const messageLabel = document.getElementById('message');
+const boutonReset = document.getElementById('nouveau');
+
+const joueurs = ["red", "blue"];
+
+const combinaisonsGagnantes = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+    [0, 4, 8], [2, 4, 6]
+];
+etatJeu = ["", "", "", "", "", "", "", "", ""];
+// initialiser une liste de 2 couleurs(en anglais) et un joueur à 0
+
+// faire une boucle sur tous les "zone" et ajouter un event qui change la couleur quand on clique
+// ajouter un controle pour éviter de reclick
+// faire en sorte d'alterner les joueurs (et donc les couleurs) joueuractuel passe de 0 à 1 puis reviens à 0 au click suivant
+// sauver le choix du joueur dans
+</script>
+
+</body>
+</html>
