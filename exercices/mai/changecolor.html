@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Réaction - Couleurs</title>
+</head>
+<body>
+
+<h2>Quelle est cette couleur ?</h2>
+
+<div id="zone-couleur"
+     style="width: 200px; height: 200px; border: 2px solid black; background-color: lightgrey; display: flex; align-items: center; justify-content: center; font-family: sans-serif;">
+    Survole-moi !
+</div>
+
+<br>
+
+<button onclick="verifierChoix('red')">ROUGE</button>
+<button onclick="verifierChoix('green')">VERT</button>
+<button onclick="verifierChoix('blue')">BLEU</button>
+
+<br><br>
+
+<div id="resultat" style="font-family: sans-serif; font-weight: bold;"></div>
+
+<script>
+    const zone = document.getElementById('zone-couleur');
+    const resultat = document.getElementById('resultat');
+
+    const couleurs = ['red', 'green', 'blue'];
+    let couleurCible = "";
+    let tempsDebut = 0;
+
+    zone.addEventListener('mouseenter', () => {
+        const indexAleatoire = Math.floor(Math.random() * couleurs.length);
+        couleurCible = couleurs[indexAleatoire];
+
+        zone.style.backgroundColor = couleurCible;
+        zone.innerText = ""; // On enlève le texte
+
+        tempsDebut = Date.now();
+        resultat.innerText = "Vite ! Cliquez sur le bon bouton !";
+    });
+
+    function verifierChoix(couleurCliquee) {
+        if (!(couleurCible === "")){
+
+            const tempsFin = Date.now();
+            const duree = (tempsFin - tempsDebut) / 1000; // Conversion en secondes
+
+            if (couleurCliquee === couleurCible) {
+                resultat.innerHTML = "Bravo ! Temps de réaction : " + duree + " secondes.";
+            } else {
+                resultat.innerHTML = "Perdu ! C'était " + couleurCible + ".";
+            }
+
+
+            couleurCible = "";
+            zone.style.backgroundColor = "lightgrey";
+        }
+    }
+</script>
+</body>
+</html>
